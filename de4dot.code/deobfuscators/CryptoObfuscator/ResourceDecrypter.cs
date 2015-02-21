@@ -313,8 +313,7 @@ namespace de4dot.code.deobfuscators.CryptoObfuscator {
 
 		public byte[] Decrypt(Stream resourceStream) {
 			byte flags = (byte)resourceStream.ReadByte();
-			if (flipFlagsBits)
-				flags = (byte)~flags;
+		
 			Stream sourceStream = resourceStream;
 			int sourceStreamOffset = 1;
 			bool didSomething = false;
